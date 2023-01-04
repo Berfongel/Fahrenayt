@@ -1,0 +1,36 @@
+﻿@{
+    ViewData["Title"] = "Privacy Policy";
+}
+@model Fahrenayt
+
+
+<html>
+    <head>
+        <title>Index</title>
+    </head>
+    <body>
+        <div>
+        @using (Html.BeginForm())
+        {
+            <table>
+                <tr>
+                    <td style="color:darkblue;font-size:20px;">Fahrenayt Derecesi : </td>
+                    <td>@Html.EditorFor(derece => derece.FahrenaytDerecesi)</td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="submit" value="Cantigrada Çevir">
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                            @* fahrenaytı cantigrada çeviren formulü getirecek ekrana*@                       
+                        @ViewBag.Message
+                    </td>
+                </tr>
+            </table>
+
+        }
+        </div>
+    </body>
+</html>
